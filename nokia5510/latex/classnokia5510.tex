@@ -1,0 +1,196 @@
+\hypertarget{classnokia5510}{}\section{nokia5510 Class Reference}
+\label{classnokia5510}\index{nokia5510@{nokia5510}}
+
+
+Nokia 5510 lcd input interface.  
+
+
+
+
+{\ttfamily \#include $<$nokia5510.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnokia5510_a57aa12152d9123dcafe5fc9713b9f476}{nokia5510} (hwlib\+::target\+::pin\+\_\+out \&din, hwlib\+::target\+::pin\+\_\+out \&clock, hwlib\+::target\+::pin\+\_\+out \&reset, hwlib\+::target\+::pin\+\_\+out \&dc, hwlib\+::target\+::pin\+\_\+out \&enable)
+\begin{DoxyCompactList}\small\item\em Constructor \hyperlink{classnokia5510}{nokia5510} lcd. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_aef73e226957277965439eefc5548379f}{setpixel} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Set pixel. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_aacf7c115fb774ad4060c1b5beffea98d}{datain} (int x\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Put byte on screen. \end{DoxyCompactList}\item 
+int \hyperlink{classnokia5510_a9cb638455fd6aea43942c27f49a909f4}{getsizex} ()
+\begin{DoxyCompactList}\small\item\em Get size x. \end{DoxyCompactList}\item 
+int \hyperlink{classnokia5510_acd5e3c9d03129ce85e785ebb183b17f6}{getsizey} ()
+\begin{DoxyCompactList}\small\item\em Get size y. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_a7bb1e454143ff18eef7e26421796be3d}{clear} ()
+\begin{DoxyCompactList}\small\item\em Screen clear. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_a45b2085b046794537372ddae0073fac1}{command} (int x\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Give a command to screen. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_abe3422e972574dea0be82cb999dd14e3}{locx} (int x=0)
+\begin{DoxyCompactList}\small\item\em Change draw loction x coordinat. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_aad9fe06623ff914e69400c8ee412291b}{locy} (int x=0)
+\begin{DoxyCompactList}\small\item\em Change draw loction y coordinat. \end{DoxyCompactList}\item 
+void \hyperlink{classnokia5510_ab86f3da997436d067b8d3e9f95de734a}{flush} ()
+\begin{DoxyCompactList}\small\item\em Flush set pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+hwlib\+::target\+::pin\+\_\+out \& {\bfseries din}\hypertarget{classnokia5510_a717ebfcb1a3196f31623f7b70c489407}{}\label{classnokia5510_a717ebfcb1a3196f31623f7b70c489407}
+
+\item 
+hwlib\+::target\+::pin\+\_\+out \& {\bfseries clock}\hypertarget{classnokia5510_a8397850a3fe1c44972ebe5d40783b343}{}\label{classnokia5510_a8397850a3fe1c44972ebe5d40783b343}
+
+\item 
+hwlib\+::target\+::pin\+\_\+out \& {\bfseries reset}\hypertarget{classnokia5510_a547d7c0c12530b9b8eb17bff44b92e6d}{}\label{classnokia5510_a547d7c0c12530b9b8eb17bff44b92e6d}
+
+\item 
+hwlib\+::target\+::pin\+\_\+out \& {\bfseries dc}\hypertarget{classnokia5510_a927a4902306dee2f7f633797eeb9c7c6}{}\label{classnokia5510_a927a4902306dee2f7f633797eeb9c7c6}
+
+\item 
+hwlib\+::target\+::pin\+\_\+out \& {\bfseries enable}\hypertarget{classnokia5510_a81908ace88b02f3565d856c7aa9b895c}{}\label{classnokia5510_a81908ace88b02f3565d856c7aa9b895c}
+
+\item 
+int {\bfseries buffer} \mbox{[}84\mbox{]}\mbox{[}48\mbox{]} = \{\{0\}\}\hypertarget{classnokia5510_a8c219b3be7a12d4de887ebf0df79b9cf}{}\label{classnokia5510_a8c219b3be7a12d4de887ebf0df79b9cf}
+
+\item 
+int {\bfseries data} \mbox{[}84\mbox{]}\mbox{[}48\mbox{]} = \{\{0\}\}\hypertarget{classnokia5510_a61b0e090af9da65d16b9846e9d487312}{}\label{classnokia5510_a61b0e090af9da65d16b9846e9d487312}
+
+\item 
+const int {\bfseries sizex} = 84\hypertarget{classnokia5510_a70bed987c215e9004fbf23211aff9d92}{}\label{classnokia5510_a70bed987c215e9004fbf23211aff9d92}
+
+\item 
+const int {\bfseries sizey} = 48\hypertarget{classnokia5510_a4342f1b52b9a3a4f80471a57aab7674c}{}\label{classnokia5510_a4342f1b52b9a3a4f80471a57aab7674c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Nokia 5510 lcd input interface. 
+
+This is a class of a \hyperlink{classnokia5510}{nokia5510} lcd of 84x48 pixels. The neccecery constructors and input functies a provided within. An empty data matrix and buffer are also provided. Framerate is based on the amount of pixels the screen needs change per flush. Needs hwlib to function properly. Pin discription\+: din\+: Used to provide data to send to the screen clock\+: Used to send the data to the screen when going from high to low. reset\+: Can interupt the data being send to the sreen\+: dc\+: decides if the data being send is a command or data to print (low = command, high = data). enable\+: enables the other pins (active low). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nokia5510@{nokia5510}!nokia5510@{nokia5510}}
+\index{nokia5510@{nokia5510}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{nokia5510(hwlib\+::target\+::pin\+\_\+out \&din, hwlib\+::target\+::pin\+\_\+out \&clock, hwlib\+::target\+::pin\+\_\+out \&reset, hwlib\+::target\+::pin\+\_\+out \&dc, hwlib\+::target\+::pin\+\_\+out \&enable)}{nokia5510(hwlib::target::pin_out &din, hwlib::target::pin_out &clock, hwlib::target::pin_out &reset, hwlib::target::pin_out &dc, hwlib::target::pin_out &enable)}}]{\setlength{\rightskip}{0pt plus 5cm}nokia5510\+::nokia5510 (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{din, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{clock, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{reset, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{dc, }
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{enable}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_a57aa12152d9123dcafe5fc9713b9f476}{}\label{classnokia5510_a57aa12152d9123dcafe5fc9713b9f476}
+
+
+Constructor \hyperlink{classnokia5510}{nokia5510} lcd. 
+
+Sets the pins needed to put data on the screen. Executes commands needed to properly use the lcd. Emptys the screen. 
+
+\subsection{Member Function Documentation}
+\index{nokia5510@{nokia5510}!clear@{clear}}
+\index{clear@{clear}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_a7bb1e454143ff18eef7e26421796be3d}{}\label{classnokia5510_a7bb1e454143ff18eef7e26421796be3d}
+
+
+Screen clear. 
+
+Clears the screen of al pixels. Emptys both the buffer and data matrix. \index{nokia5510@{nokia5510}!command@{command}}
+\index{command@{command}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{command(int x[8])}{command(int x[8])}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::command (
+\begin{DoxyParamCaption}
+\item[{int}]{x\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_a45b2085b046794537372ddae0073fac1}{}\label{classnokia5510_a45b2085b046794537372ddae0073fac1}
+
+
+Give a command to screen. 
+
+Gives a byte of data as a command to the screen. Used to change draw location. \index{nokia5510@{nokia5510}!datain@{datain}}
+\index{datain@{datain}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{datain(int x[8])}{datain(int x[8])}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::datain (
+\begin{DoxyParamCaption}
+\item[{int}]{x\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_aacf7c115fb774ad4060c1b5beffea98d}{}\label{classnokia5510_aacf7c115fb774ad4060c1b5beffea98d}
+
+
+Put byte on screen. 
+
+Puts a byte of data on the screen. Used by flush. \index{nokia5510@{nokia5510}!flush@{flush}}
+\index{flush@{flush}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{flush()}{flush()}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_ab86f3da997436d067b8d3e9f95de734a}{}\label{classnokia5510_ab86f3da997436d067b8d3e9f95de734a}
+
+
+Flush set pixels. 
+
+Compares the data matrix to the buffer matrix. Differences are copied to the buffer. Bytes with differences in them are printed on the screen. Data matrix is emptied. \index{nokia5510@{nokia5510}!getsizex@{getsizex}}
+\index{getsizex@{getsizex}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{getsizex()}{getsizex()}}]{\setlength{\rightskip}{0pt plus 5cm}int nokia5510\+::getsizex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_a9cb638455fd6aea43942c27f49a909f4}{}\label{classnokia5510_a9cb638455fd6aea43942c27f49a909f4}
+
+
+Get size x. 
+
+Returns the x size of the lcd. \index{nokia5510@{nokia5510}!getsizey@{getsizey}}
+\index{getsizey@{getsizey}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{getsizey()}{getsizey()}}]{\setlength{\rightskip}{0pt plus 5cm}int nokia5510\+::getsizey (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_acd5e3c9d03129ce85e785ebb183b17f6}{}\label{classnokia5510_acd5e3c9d03129ce85e785ebb183b17f6}
+
+
+Get size y. 
+
+Returns the y size of the lcd. \index{nokia5510@{nokia5510}!locx@{locx}}
+\index{locx@{locx}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{locx(int x=0)}{locx(int x=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::locx (
+\begin{DoxyParamCaption}
+\item[{int}]{x = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_abe3422e972574dea0be82cb999dd14e3}{}\label{classnokia5510_abe3422e972574dea0be82cb999dd14e3}
+
+
+Change draw loction x coordinat. 
+
+Makes a binairy byte from an integer. Adds a 1 on the appropriat spot to specify it as a new x coordinat. Executes the command. \index{nokia5510@{nokia5510}!locy@{locy}}
+\index{locy@{locy}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{locy(int x=0)}{locy(int x=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::locy (
+\begin{DoxyParamCaption}
+\item[{int}]{x = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_aad9fe06623ff914e69400c8ee412291b}{}\label{classnokia5510_aad9fe06623ff914e69400c8ee412291b}
+
+
+Change draw loction y coordinat. 
+
+Makes a binairy byte from an integer. Adds a 1 on the appropriat spot to specify it as a new y coordinat. Executes the command. \index{nokia5510@{nokia5510}!setpixel@{setpixel}}
+\index{setpixel@{setpixel}!nokia5510@{nokia5510}}
+\subsubsection[{\texorpdfstring{setpixel(int x, int y)}{setpixel(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void nokia5510\+::setpixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classnokia5510_aef73e226957277965439eefc5548379f}{}\label{classnokia5510_aef73e226957277965439eefc5548379f}
+
+
+Set pixel. 
+
+Sets a pixel in the data matrix at the given x and y coordinats. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+nokia5510.\+hpp\item 
+nokia5510.\+cpp\end{DoxyCompactItemize}
